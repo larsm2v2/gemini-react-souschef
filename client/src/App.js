@@ -7,9 +7,21 @@ const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
 
   const surpriseOptions = [
-    "Who won the latest Nobel Peace Prize?",
-    "Where does pizza come from?",
-    "How do you make a origami crane?",
+    "Show me a Latin recipe",
+    "Show me an Italian recipe",
+    "Show me a Haitian recipe",
+    "Show me a Greek recipe",
+    "Show me a Welsh recipe",
+    "Show me a Latin dinner recipe",
+    "Show me an Italian dinner recipe",
+    "Show me a Haitian dinner recipe",
+    "Show me a Greek dinner recipe",
+    "Show me a Welsh dinner recipe",
+    "Show me a Latin dinner recipe",
+    "Show me an Italian dessert recipe",
+    "Show me a Haitian dessert recipe",
+    "Show me a Greek dessert recipe",
+    "Show me a Welsh dessert recipe",
   ];
 
   const surprise = () => {

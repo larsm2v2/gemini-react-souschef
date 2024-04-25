@@ -2,10 +2,11 @@ const PORT = 8000;
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
 app.use(cors());
 app.use(express.json());
-require("dotenv").config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
@@ -14,9 +15,6 @@ app.post("/gemini", async (req, res) => {
 
   const chat = model.startChat({
     history: req.body.history,
-    generationConfig: {
-      maxOutputTokens: 100,
-    },
   });
   const msg = req.body.message;
   const result = await chat.sendMessageStream(msg);
